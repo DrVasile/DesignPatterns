@@ -1,6 +1,20 @@
-public class FactoryCreator {
+public final class FactoryCreator {
+    private static volatile FactoryCreator instance;
 
-    public static  AbstractFactory getFactory(String sport) {
+    private FactoryCreator() {};
+
+    public static FactoryCreator getInstance() {
+        if (instance == null) {
+            synchronized (FactoryCreator.class) {
+                if (instance == null) {
+                    instance = new FactoryCreator();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public AbstractFactory getFactory(String sport) {
         AbstractFactory factory = null;
         switch (sport) {
             case "Volleyball":

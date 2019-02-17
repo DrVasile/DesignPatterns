@@ -1,4 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class AbstractFactory {
+    public static Map<String, Player> prototypes = new HashMap<>();
+
+    public static Player getPrototype(String sport) {
+        try {
+            return prototypes.get(sport).clone();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public abstract PlayerBuilder getBuilder(String position);
 }
 
