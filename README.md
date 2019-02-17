@@ -21,3 +21,6 @@ Some examples of this kind of design patterns are :
    * Object Pooling
    * Factory Method
    * Abstract Factory
+   
+## Implementation :
+In this project I've implemented 5 creational design patterns i.e. (Singleton, Builder, Prototype, Factory Method and Abstract Factory) with the emphasis on the fundamental object _**Player**_. The player class contains 4 attributes and the *get* and *set* methods as you can see in *Player.java* file.
