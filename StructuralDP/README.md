@@ -72,6 +72,21 @@ Now to create a player I give to it also an object reference to a class which im
 
 __2. Adapter__ 
 
+For the _**Adapter**_ pattern I have 2 classes, the _**PlayerAdapter**_ and _**PlayerBuilder**_. In the builder class I create the first see if the sport is valid, create the adapter and then execute the specific method. In the adapter class based on sport I create an object of one of the specialized classes _**VolleyballPlayer**_ and _**BasketballPlayer**_ : 
+
+```
+PlayerAdapter(String sport, String gender) {
+    if (sport.equalsIgnoreCase("Volleyball")) {
+        advancedPlayer = new VolleyballPlayer(gender.equalsIgnoreCase("male") ? new MalePlayer() : new FemalePlayer());
+    } else {
+        advancedPlayer = new BasketballPlayer(gender.equalsIgnoreCase("male") ? new MalePlayer() : new FemalePlayer());
+    }
+}
+```
+
+Below you can see how the builder is used and how he adapts : 
+
+![](/images/SecondLab/Capture.PNG)
 
 The last attribute which is the list of teammates is used in the _**Composite Pattern**_. The _**Composite Pattern**_ is used when we need a way to treat a whole group of objects in a similar manner. In my case I have the list of teammates which in some cases are treated equally in team related stuff, and by this approach I compose another entity which is the team using the base object _**Player**_.
 
