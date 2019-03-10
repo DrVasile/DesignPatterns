@@ -2,6 +2,7 @@ public class VolleyballPlayer extends BasicPlayer {
 
     VolleyballPlayer(PlayerAPI playerAPI) {
         super(playerAPI);
+        super.setSport("Volleyball");
     }
 
     @Override

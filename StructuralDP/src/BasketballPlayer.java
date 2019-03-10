@@ -2,6 +2,7 @@ public class BasketballPlayer extends BasicPlayer {
 
     BasketballPlayer(PlayerAPI playerAPI) {
         super(playerAPI);
+        super.setSport("Basketball");
     }
 
     @Override
