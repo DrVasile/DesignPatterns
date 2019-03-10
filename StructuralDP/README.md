@@ -88,10 +88,22 @@ Below you can see how the builder is used and how he adapts :
 
 ![](/images/SecondLab/Capture1.PNG)
 
-The last attribute which is the list of teammates is used in the _**Composite Pattern**_. The _**Composite Pattern**_ is used when we need a way to treat a whole group of objects in a similar manner. In my case I have the list of teammates which in some cases are treated equally in team related stuff, and by this approach I compose another entity which is the team using the base object _**Player**_.
+__3. Composite__
+
+The last attribute in _**BasicPlayer**_ class which is the list of teammates is used in the _**Composite Pattern**_. The _**Composite Pattern**_ is used when we need a way to treat a whole group of objects in a similar manner. In my case I have the list of teammates which in some cases are treated equally in team related stuff, and by this approach I compose another entity which is the team using the base object _**Player**_.
+
+__4. Filter__
 
 For the _**Filter Pattern**_ I have the interface _**Criteria**_ implemented in different classes based on the criteria of filtration. For example in the class _**CriteriaMale**_ I've implemented the method from the interface to get a list of only male players.
 
+Bellow you can see how the _**Filter Pattern**_ and _**Composite Pattern**_ work together to get the male teammates of a player : 
+
+![](/images/SecondLab/Capture2.PNG)
+
+__5. Decorator__
+
 Above the _**Player**_ class I have the _**PlayerInterface**_ in which I specify that all the players should implement the  _**getDescription()**_ method. In  _**Player**_ class I have the basic implementation, but to be able to modify it at runtime I've added the  _**PlayerDecorator**_ abstract class which then is extended by  _**CaptainPlayer**_ class. In it I add a bit of text which states that the current player is the captain. 
 
-## Screenshots
+As you can see in the figure below I use the _**CaptainPlayer**_ derived from Decorator to add Captain to the description of the player : 
+
+![](/images/SecondLab/Capture3.PNG)
