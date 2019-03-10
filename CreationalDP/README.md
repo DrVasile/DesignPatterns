@@ -53,4 +53,4 @@ The proccess from _**FactoryCreator**_ till builder is in the following lines:
 ~~~
 
 ## Screenshot
-![](images/Capture.PNG)
+![](/images/Capture.PNG)
