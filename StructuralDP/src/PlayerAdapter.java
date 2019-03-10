@@ -1,6 +1,6 @@
 class PlayerAdapter extends BasicPlayer {
 
-    BasicPlayer advancedPlayer;
+    private BasicPlayer advancedPlayer;
 
     PlayerAdapter(String sport, String gender) {
         if (sport.equalsIgnoreCase("Volleyball")) {
