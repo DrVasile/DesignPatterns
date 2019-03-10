@@ -21,7 +21,9 @@ Some examples of this kind of design patterns are :
    * Proxy
    
 ## Implementation :
-In this project I've implemented 5 creational design patterns i.e. (Singleton, Builder, Prototype, Factory Method and Abstract Factory) with the emphasis on the fundamental object _**Player**_. The player class contains 4 attributes and the *get* and *set* methods as you can see in *Player.java* file. Also in that file is a method called *clone()* which is used to return a clone of the object if it exists in the *HashMap* which I'm maintaining in _**AbstractFactory**_ class.
+In this project I've implemented 5 structural design patterns using the idea from the previous project with the creational patterns. Here also the main object is the Player. It has 5 String attributes with the basic information about the player (i.e. name, surname, gender, sport and position) and also a list of teammates.
+
+The last attribute which is the list of teammates is used in the _**Composite**_ Pattern. The _**Composite**_ pattern is used when we need a way to treat a whole group of objects in a similar manner. In my case I have the list of teammates which in some cases are treated equally in team related stuff, and by this approach I compose another entity which is the team using the base object player.
 
 ## Screenshot
 ![](/images/Capture1.PNG)
