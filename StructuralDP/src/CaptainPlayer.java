@@ -1,7 +1,12 @@
 public class CaptainPlayer extends PlayerDecorator{
 
-    public CaptainPlayer(Player player) {
+    public CaptainPlayer(BasicPlayer player) {
         super(player);
+    }
+
+    @Override
+    public void play() {
+        super.player.play();
     }
 
     @Override

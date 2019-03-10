@@ -4,10 +4,10 @@ import java.util.List;
 public class CriteriaMale implements Criteria {
 
     @Override
-    public List<Player> criteria(List<Player> playerList) {
-        List<Player> malePlayers = new ArrayList<>();
+    public List<BasicPlayer> criteria(List<BasicPlayer> playerList) {
+        List<BasicPlayer> malePlayers = new ArrayList<>();
 
-        for (Player player : playerList) {
+        for (BasicPlayer player : playerList) {
             if (player.getGender().equalsIgnoreCase("Male")) {
                 malePlayers.add(player);
             }

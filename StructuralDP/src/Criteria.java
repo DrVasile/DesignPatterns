@@ -1,5 +1,5 @@
 import java.util.List;
 
 public interface Criteria {
-    public List<Player> criteria(List<Player> playerList);
+    public List<BasicPlayer> criteria(List<BasicPlayer> playerList);
 }

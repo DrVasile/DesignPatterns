@@ -1,8 +1,8 @@
-public abstract class PlayerDecorator implements PlayerInterface {
+public abstract class PlayerDecorator implements Player {
 
     Player player;
 
-    PlayerDecorator(Player player) {
+    PlayerDecorator(BasicPlayer player) {
         this.player = player;
     }
 
