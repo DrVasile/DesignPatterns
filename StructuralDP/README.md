@@ -86,7 +86,7 @@ PlayerAdapter(String sport, String gender) {
 
 Below you can see how the builder is used and how he adapts : 
 
-![](/images/SecondLab/Capture.PNG)
+![](/images/SecondLab/Capture1.PNG)
 
 The last attribute which is the list of teammates is used in the _**Composite Pattern**_. The _**Composite Pattern**_ is used when we need a way to treat a whole group of objects in a similar manner. In my case I have the list of teammates which in some cases are treated equally in team related stuff, and by this approach I compose another entity which is the team using the base object _**Player**_.
 
