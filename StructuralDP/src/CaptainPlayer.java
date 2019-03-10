@@ -13,4 +13,9 @@ public class CaptainPlayer extends PlayerDecorator{
     public String getDescription() {
         return super.player.getDescription() + " - [ Captain ]";
     }
+
+    @Override
+    public void standards() {
+        super.player.standards();
+    }
 }

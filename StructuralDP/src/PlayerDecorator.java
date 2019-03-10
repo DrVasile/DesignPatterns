@@ -1,4 +1,4 @@
-public abstract class PlayerDecorator implements Player {
+public abstract class PlayerDecorator extends Player {
 
     Player player;
 

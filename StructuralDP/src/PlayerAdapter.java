@@ -1,16 +1,16 @@
-public class PlayerAdapter extends BasicPlayer {
+class PlayerAdapter extends BasicPlayer {
 
     BasicPlayer advancedPlayer;
 
-    public PlayerAdapter(String sport) {
+    PlayerAdapter(String sport, String gender) {
         if (sport.equalsIgnoreCase("Volleyball")) {
-            advancedPlayer = new VolleyballPlayer();
+            advancedPlayer = new VolleyballPlayer(gender.equalsIgnoreCase("male") ? new MalePlayer() : new FemalePlayer());
         } else {
-            advancedPlayer = new BasketballPlayer();
+            advancedPlayer = new BasketballPlayer(gender.equalsIgnoreCase("male") ? new MalePlayer() : new FemalePlayer());
         }
     }
 
-    public void playSport() {
+    void playSport() {
         advancedPlayer.play();
     }
 }

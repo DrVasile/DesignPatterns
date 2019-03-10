@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicPlayer implements Player {
+public class BasicPlayer extends Player {
 
     private String name;
     private String surname;
@@ -10,7 +10,12 @@ public class BasicPlayer implements Player {
     private String position;
     private List<BasicPlayer> teammates;
 
-    public BasicPlayer() {
+    BasicPlayer() {
+
+    }
+
+    BasicPlayer(PlayerAPI playerAPI) {
+        super(playerAPI);
         teammates = new ArrayList<BasicPlayer>();
     }
 
@@ -69,5 +74,10 @@ public class BasicPlayer implements Player {
                 + ", Gender : " + gender
                 + ", Sport : " + sport
                 + ", Position : " + position + " ]";
+    }
+
+    @Override
+    void standards() {
+        playerAPI.standards(sport);
     }
 }

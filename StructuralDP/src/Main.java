@@ -1,8 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        Player playerA = new VolleyballPlayer();
-        Player playerB = new CaptainPlayer(new VolleyballPlayer());
+        Player playerA = new VolleyballPlayer(new FemalePlayer());
+        Player playerB = new CaptainPlayer(new VolleyballPlayer(new MalePlayer()));
 
         System.out.println(playerA.getDescription());
         System.out.println(playerB.getDescription());
@@ -10,6 +10,6 @@ public class Main {
         playerB.play();
 
         PlayerBuilder playerBuilder = new PlayerBuilder();
-        playerBuilder.build("volleyball");
+        playerBuilder.build("volleyball", "female");
     }
 }
