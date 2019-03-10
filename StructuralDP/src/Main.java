@@ -20,8 +20,8 @@ public class Main {
         playerBuilder.build("Basketball", "Male");*/
 
         /**
-         * Test Composite
-         */
+         * Test Composite and Filter
+
         BasicPlayer player1 = new BasicPlayer(new FemalePlayer());
         BasicPlayer player2 = new BasicPlayer(new MalePlayer());
         BasicPlayer player3 = new BasicPlayer(new MalePlayer());
@@ -40,6 +40,6 @@ public class Main {
         List<BasicPlayer> males = malePlayers.criteria(player5.getTeammates());
         for (BasicPlayer player : males) {
             System.out.println(player.getDescription());
-        }
+        } */
     }
 }
