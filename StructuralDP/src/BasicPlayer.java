@@ -39,6 +39,10 @@ public class BasicPlayer extends Player {
         this.position = position;
     }
 
+    void addTeammate(BasicPlayer player) { this.teammates.add(player); }
+
+    void removeTeammate(BasicPlayer player) { this.teammates.remove(player); }
+
     String getName() {
         return this.name;
     }
