@@ -68,7 +68,7 @@ public void standards(String sport) {
 
 Now to create a player I give to it also an object reference to a class which implements the API as below :
 
-![](/images/Capture.PNG)
+![](/images/SecondLab/Capture.PNG)
 
 __2. Adapter__ 
 
