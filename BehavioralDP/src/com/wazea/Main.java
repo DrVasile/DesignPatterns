@@ -3,6 +3,7 @@ package com.wazea;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        PlayerTemplate player = new BasketballPlayer();
+        player.trainTillCompetition(3);
     }
 }
